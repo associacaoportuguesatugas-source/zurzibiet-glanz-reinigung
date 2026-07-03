@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zurzibiet Glanz Reinigung</title>
+<meta name="description" content="Zurzibiet Glanz Reinigung — professionelle Reinigungsdienstleistungen in Leuggern und Umgebung. Wohnungsreinigung, Geschäftsreinigung, Unterhalt & Hauswartung, Fassaden- und Fensterreinigung.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-dark: #0b3d63;
+    --blue: #1c7fc4;
+    --blue-light: #4fb3e8;
+    --ice: #eef7fc;
+    --white: #ffffff;
+    --ink: #14202b;
+    --muted: #5c6b78;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--white);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3, .display{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  a{ color: inherit; }
+  img{ max-width:100%; display:block; }
+
+  .wave-divider{
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--blue-dark) 0%, var(--blue) 50%, var(--blue-light) 100%);
+  }
+
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  nav{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(11,61,99,0.08);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 12px 24px;
+    max-width: 1080px; margin: 0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .brand img{ width:44px; height:44px; object-fit:contain; }
+  .brand-text{ font-family:'Poppins', sans-serif; font-weight:700; font-size:17px; color: var(--blue-dark); line-height:1.2; }
+  .brand-text span{ display:block; font-size:11px; font-weight:500; color: var(--muted); letter-spacing:0.04em; }
+  .nav-links{ display:flex; align-items:center; gap:28px; font-size:14px; font-weight:500; }
+  .nav-links a{ text-decoration:none; color: var(--muted); transition: color 0.2s; }
+  .nav-links a:hover{ color: var(--blue); }
+  .nav-links .btn{ margin-left:4px; }
+
+  /* HERO */
+  .hero{
+    padding: 80px 24px 70px;
+    text-align:center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--ice) 0%, var(--white) 100%);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(28,127,196,0.14), transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(79,179,232,0.16), transparent 40%);
+    pointer-events:none;
+  }
+  .hero-inner{ position:relative; }
+  .hero-logo{
+    width:120px; height:120px; object-fit:contain;
+    margin: 0 auto 22px;
+  }
+  .eyebrow{
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    font-weight:600;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+  .hero h1{
+    font-size: clamp(30px, 5vw, 48px);
+    color: var(--blue-dark);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height:1.15;
+  }
+  .hero p.lead{
+    max-width: 560px;
+    margin: 20px auto 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height:1.6;
+  }
+  .cta-row{
+    margin-top: 34px;
+    display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding: 13px 26px;
+    border-radius: 999px;
+    text-decoration:none;
+    font-weight:600;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary{
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(28,127,196,0.3);
+  }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 12px 26px rgba(28,127,196,0.4); }
+  .btn-ghost{
+    border: 1.5px solid rgba(11,61,99,0.2);
+    color: var(--blue-dark);
+  }
+  .btn-ghost:hover{ border-color: var(--blue); color: var(--blue); }
+
+  /* SECTION GENERAL */
+  section{ padding: 76px 0; }
+  .section-head{ max-width: 620px; margin: 0 auto 46px; text-align:center; }
+  .section-head .eyebrow{ }
+  .section-head h2{ font-size: clamp(26px, 4vw, 36px); color: var(--blue-dark); }
+  .section-head p{ color: var(--muted); margin-top: 14px; font-size: 16px; line-height: 1.6; }
+
+  /* SERVICES */
+  .services-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+  }
+  .service-card{
+    background: var(--ice);
+    border: 1px solid rgba(11,61,99,0.06);
+    border-radius: 14px;
+    padding: 30px 26px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover{ transform: translateY(-4px); box-shadow: 0 14px 30px rgba(11,61,99,0.1); }
+  .service-card .icon{
+    width:48px; height:48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-light));
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px;
+    margin-bottom:18px;
+  }
+  .service-card h3{ font-size: 18px; color: var(--blue-dark); margin-bottom: 8px; }
+  .service-card p{ font-size: 14.5px; color: var(--muted); line-height:1.55; margin:0; }
+
+  /* ABOUT */
+  .about{ background: var(--blue-dark); color: #fff; }
+  .about-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items:center;
+  }
+  .about .section-head{ text-align:left; margin: 0 0 24px; max-width:none; }
+  .about .eyebrow{ color: var(--blue-light); }
+  .about h2{ color:#fff; }
+  .about-text p{ color: rgba(255,255,255,0.78); line-height: 1.75; font-size: 16px; margin: 0 0 16px; }
+  .about-text strong{ color: #fff; }
+  .stat-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .stat{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 22px;
+    text-align:center;
+  }
+  .stat .num{ font-family:'Poppins',sans-serif; font-size: 30px; font-weight:700; color: var(--blue-light); }
+  .stat .label{ font-size: 13px; color: rgba(255,255,255,0.7); margin-top:6px; }
+
+  /* WHY US */
+  .why-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  .why-item{
+    text-align:center;
+    padding: 10px;
+  }
+  .why-item .check{
+    width:44px; height:44px;
+    border-radius:50%;
+    background: var(--ice);
+    color: var(--blue);
+    display:flex; align-items:center; justify-content:center;
+    margin: 0 auto 14px;
+    font-size:20px;
+    font-weight:700;
+  }
+  .why-item h4{ font-size:15.5px; color: var(--blue-dark); margin-bottom:6px; font-family:'Poppins',sans-serif; font-weight:600; }
+  .why-item p{ font-size: 13.5px; color: var(--muted); margin:0; line-height:1.5; }
+
+  /* CONTACT */
+  .contact{
+    background: var(--ice);
+    border-radius: 20px;
+    padding: 54px 40px;
+    text-align:center;
+    margin: 0 24px;
+  }
+  .contact h2{ font-size: clamp(26px, 4vw, 34px); color: var(--blue-dark); margin-bottom: 14px; }
+  .contact p.lead{ color: var(--muted); max-width: 480px; margin: 0 auto 32px; line-height:1.6; }
+  .contact-row{
+    display:flex; justify-content:center; gap: 16px; flex-wrap: wrap;
+  }
+  .contact-btn{
+    display:flex; align-items:center; gap:10px;
+    padding: 13px 24px;
+    border-radius: 999px;
+    background:#fff;
+    border: 1px solid rgba(11,61,99,0.12);
+    text-decoration:none;
+    font-size: 14px;
+    font-weight:600;
+    color: var(--blue-dark);
+    transition: all 0.2s;
+  }
+  .contact-btn:hover{ border-color: var(--blue); background: rgba(28,127,196,0.06); transform: translateY(-2px); }
+  .contact-btn svg{ width:18px; height:18px; flex-shrink:0; }
+
+  footer{
+    padding: 44px 24px 30px;
+    text-align:center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer .foot-logo{
+    font-family:'Poppins', sans-serif;
+    color: var(--blue-dark);
+    font-weight:700;
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+  footer .legal{ margin-top:10px; opacity:0.7; font-size:12px; }
+
+  @media (max-width: 760px){
+    .nav-links{ display:none; }
+    .about-grid{ grid-template-columns: 1fr; }
+    .contact{ padding: 40px 22px; margin: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="Zurzibiet Glanz Reinigung">
+      <span class="brand-text">Zurzibiet<span>Glanz Reinigung</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-primary">Offerte anfragen</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top" class="hero">
+  <div class="wrap hero-inner">
+    <img class="hero-logo" src="assets/logo.png" alt="Zurzibiet Glanz Reinigung Logo">
+    <div class="eyebrow">Reinigungsfirma in Leuggern</div>
+    <h1>Qualität, die man sieht.<br>Vertrauen, das man spürt.</h1>
+    <p class="lead">Zurzibiet Glanz Reinigung steht für Qualität, Professionalität und Zuverlässigkeit — für Privatpersonen, Geschäfte und Liegenschaften im Zurzibiet und Umgebung.</p>
+    <div class="cta-row">
+      <a href="#kontakt" class="btn btn-primary">Kostenlose Offerte</a>
+      <a href="#leistungen" class="btn btn-ghost">Unsere Leistungen</a>
+    </div>
+  </div>
+</div>
+
+<div class="wave-divider"></div>
+
+<section id="leistungen">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Leistungen</div>
+      <h2>Reinigung nach Mass</h2>
+      <p>Von der Wohnung bis zur Fassade — wir sorgen für Sauberkeit, auf die Sie sich verlassen können.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🏠</div>
+        <h3>Wohnungsreinigung</h3>
+        <p>Unterhalts- und Umzugsreinigung für Ihr Zuhause — gründlich und zuverlässig.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🏢</div>
+        <h3>Geschäftsreinigung</h3>
+        <p>Büros, Praxen und Geschäftsräume — sauber und einladend für Mitarbeitende und Kunden.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🧹</div>
+        <h3>Unterhalt & Hauswartung</h3>
+        <p>Regelmässige Pflege von Liegenschaften, Treppenhäusern und Gemeinschaftsflächen.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🪟</div>
+        <h3>Fassaden- & Fensterreinigung</h3>
+        <p>Streifenfreie Fenster und gepflegte Fassaden — innen und aussen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="ueber-uns">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head">
+        <div class="eyebrow">Über uns</div>
+        <h2>Mit Herz und Sorgfalt sauber</h2>
+      </div>
+      <div class="about-text">
+        <p><strong>Zurzibiet Glanz Reinigung</strong> wurde 2024 von Carla Fernandes Pereira in Leuggern gegründet, mit dem Ziel, saubere und gepflegte Räume zu schaffen, in denen man sich wohlfühlt.</p>
+        <p>Mehr als eine Dienstleistung — ein Versprechen: <strong>Qualität, Vertrauen und Zuverlässigkeit</strong> bei jedem Auftrag, ob privat oder geschäftlich.</p>
+        <p>Wir fördern zudem Initiativen, die den Zusammenhalt und die Integration in der Region stärken.</p>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">2024</div><div class="label">Gegründet</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">Zuverlässigkeit</div></div>
+      <div class="stat"><div class="num">4</div><div class="label">Leistungsbereiche</div></div>
+      <div class="stat"><div class="num">AG</div><div class="label">Kanton Aargau</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Warum wir</div>
+      <h2>Qualität, die sich sehen lässt</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="check">✓</div>
+        <h4>Qualität</h4>
+        <p>Sorgfältige Arbeit mit Liebe zum Detail.</p>
+      </div>
+      <div class="why-item">
+        <div class="check">✓</div>
+        <h4>Professionalität</h4>
+        <p>Zuverlässig, pünktlich und diskret.</p>
+      </div>
+      <div class="why-item">
+        <div class="check">✓</div>
+        <h4>Vertrauen</h4>
+        <p>Langfristige Zusammenarbeit auf Augenhöhe.</p>
+      </div>
+      <div class="why-item">
+        <div class="check">✓</div>
+        <h4>Flexibilität</h4>
+        <p>Lösungen, die sich Ihrem Bedarf anpassen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="contact">
+    <h2>Bereit für mehr Glanz?</h2>
+    <p class="lead">Kontaktieren Sie uns für eine kostenlose und unverbindliche Offerte.</p>
+    <div class="contact-row">
+      <a class="contact-btn" href="tel:+41764431973">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +41 76 443 19 73
+      </a>
+      <a class="contact-btn" href="https://www.google.com/maps/search/?api=1&query=Erlenweg+3,+5316+Leuggern" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Erlenweg 3, 5316 Leuggern
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">ZURZIBIET GLANZ REINIGUNG</div>
+  <p>Qualität, die man sieht. Vertrauen, das man spürt.</p>
+  <p class="legal">Zurzibiet Glanz Reinigung Carla Fernandes Pereira · Erlenweg 3, 5316 Leuggern · UID CHE-314.857.327</p>
+</footer>
+
+</body>
+</html>
